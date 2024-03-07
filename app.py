@@ -1,7 +1,7 @@
-# app.py - This should be at the root of your project or in a specific directory where you will run your streamlit app
+
 import streamlit as st
 import matplotlib.pyplot as plt
-from adjustText import adjust_text  # Ensure you have 'adjustText' installed with 'pip install adjustText'
+from adjustText import adjust_text  
 import seaborn as sns
 
 import pandas as pd
@@ -142,23 +142,6 @@ def analyze_market_patterns(ticker, start_date, end_date, interval, rsi_period):
     # If all goes well, return the results as earlier
     return filtered_probability_summary, analysis_remarks, plot_buffer
 
-
-
-# if run_analysis:
-#     st.subheader('Analyzing Market Patterns')
-
-#     # Call the function to perform the analysis and get back the plot buffer, if there is one
-#     results, analysis_remarks, plot_buffer = analyze_market_patterns(ticker, start_date, end_date, interval, rsi_period)
-    
-#     st.write(analysis_remarks)  # Display analysis remarks
-#     if not results.empty:
-#         st.table(results)  # Display the analysis results in a table
-#         if plot_buffer:
-#             st.subheader('Scatter Plot of Historical Counts vs Probability')
-#             st.image(plot_buffer)  # Display the scatter plot
-#         st.success('Analysis Complete!')
-#     else:
-#         st.error(analysis_remarks)
 
 if run_analysis:
     st.subheader('Analyzing Market Patterns')
